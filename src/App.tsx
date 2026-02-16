@@ -1,4 +1,6 @@
 import { Countdown } from "./components/Countdown";
+import bg from "/wallpaperAmjPage.png";
+import logo from "/amjLogo.png";
 
 function App() {
   const eventDate = new Date("2026-07-12T10:00:00");
@@ -7,7 +9,7 @@ function App() {
     <div
       className="min-h-screen min-w-screen bg-fixed bg-center bg-cover flex flex-col items-center justify-center"
       style={{
-        backgroundImage: "url('../wallpaperAmjPage.png')",
+        backgroundImage: `url('${bg}')`,
       }}
     >
       <div className="absolute inset-0 bg-black/60"></div>
@@ -15,7 +17,7 @@ function App() {
       <div className="relative z-10 flex flex-col items-center gap-8 px-4 text-center">
         
         <img
-          src="../amjLogo.png"
+          src={logo}
           alt="Logo AMJ"
           className="w-40 md:w-60"
         />
