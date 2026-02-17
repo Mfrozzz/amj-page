@@ -1,73 +1,150 @@
-# React + TypeScript + Vite
+# 🌍 AMJ Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing page oficial da **AMJ – Ação Missionária Juvenil**.
 
-Currently, two official plugins are available:
+Projeto desenvolvido em **React + TypeScript + Vite + Tailwind CSS**, com deploy via GitHub Pages.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Sobre o Projeto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+A AMJ Page é uma single-page application criada para apresentar:
 
-## Expanding the ESLint configuration
+* ⏳ Countdown para o início do evento
+* 📖 Seção “O que é?”
+* 🏙 Informações sobre a cidade
+* 🎒 Checklist para missionários
+* ✝ Espiritualidade e carisma salesiano
+* 🌍 AJS (Articulação da Juventude Salesiana)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+O objetivo é oferecer uma experiência moderna, responsiva e visualmente impactante para os jovens missionários.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🛠 Tecnologias Utilizadas
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* React
+* TypeScript
+* Vite
+* Tailwind CSS
+* Lucide React (ícones)
+
+---
+
+## 🚀 Como Rodar o Projeto Localmente
+
+```bash
+# Clonar o repositório
+git clone https://github.com/mfrozzz/amj-page.git
+
+# Entrar na pasta
+cd amj-page
+
+# Instalar dependências
+npm install
+
+# Rodar em ambiente de desenvolvimento
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+A aplicação ficará disponível em:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+http://localhost:5173
+```
+
+---
+
+## 📦 Build de Produção
+
+```bash
+npm run build
+```
+
+Para visualizar a build:
+
+```bash
+npm run preview
+```
+
+---
+
+## 🌐 Deploy no GitHub Pages
+
+O projeto utiliza o pacote `gh-pages` para deploy automático.
+
+```bash
+npm run deploy
+```
+
+A aplicação será publicada na branch:
+
+```
+gh-pages
+```
+
+E ficará disponível em:
+
+```
+https://<SEU_USUARIO>.github.io/amj-page/
+```
+
+---
+
+## 📁 Estrutura de Pastas
+
+```
+amj-page/
+├── public/                     # assets públicos (ícones, imagens, etc.)
+│   ├── wallpaperAmjPage.png
+│   ├── amjLogo.png
+│   └── ...                     # imagens das seções
+├── src/
+│   ├── assets/                 # assets importados pelo app
+│   ├── components/             # componentes React reutilizáveis
+│   │   ├── Countdown.tsx       # contagem regressiva do evento
+│   │   ├── Section.tsx         # componente de seção (imagem + texto)
+│   │   ├── Navbar.tsx          # barra de navegação fixa
+│   │   └── Footer.tsx          # rodapé com links
+│   ├── App.tsx                 # componente raiz da aplicação
+│   ├── main.tsx                # bootstrap do React + Vite
+│   ├── index.css               # estilos globais
+│   └── App.css                 # estilos específicos do App
+├── vite.config.ts              # configuração do Vite
+└── package.json                # dependências e scripts
+```
+
+Breve descrição:
+- `public/`: recursos estáticos servidos diretamente (imagens, logo, etc.).
+- `src/components/`: componentes pequenos e reusáveis que compõem a UI.
+- `src/` (raiz): ponto de entrada da app e arquivos de estilo.
+- `vite.config.ts` e `package.json`: configuração do build e scripts.
+
+---
+
+## 🎨 Funcionalidades
+
+* Background fixo com overlay via `linear-gradient`
+* Navbar fixa com scroll suave
+* Navegação por âncoras internas
+* Layout responsivo
+* Footer com link para repositório
+* Compatível com GitHub Pages
+
+---
+
+## 👨🏻‍💻 Autor
+
+Desenvolvido por **Marcos Vinicius Boava**
+Desenvolvedor Full Stack
+
+---
+
+## 📜 Licença
+
+Projeto criado para fins pastorais e missionários.
+Uso livre para evangelização e iniciativas juvenis.
+
+---
+
+> “Ide pelo mundo inteiro e anunciai o Evangelho.” – Mc 16,15
